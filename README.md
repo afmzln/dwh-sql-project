@@ -15,13 +15,10 @@ Key components:
 
 # 🏗️**Data Architecture (Medallion Layers)**
 
-![MEDALLION LAYERS.drawio.png](attachment:af3d4c9d-de5b-4c49-9e83-98567a56a023:MEDALLION_LAYERS.drawio.png)
-
-| Layer | Description | Key Action |
-|-------|-------------|------------|
-| **Bronze** | Raw, unprocessed data  | CSV ingestion to SQL Server |
-| **Silver** | Cleaned/validated data | Deduplication,standardization |
-| **Gold** | Business-ready data | Structured for analytics/reporting  |
+![Image](https://github.com/user-attachments/assets/f883bc6e-1f3d-48bc-9f24-879fa4c992ea)
+- **Bronze**: Stores raw data exactly as ingested (like CSVs), maintaining original fidelity.
+- **Silver**: Filters, cleans, and standardizes data ensures reliable, consistent data for analysis.
+- **Gold**: Business-friendly datasets structured for analytics (e.g., Star Schema)  enable rapid querying for reports and dashboards.
 
 # 🛠️**Tools Used**
 | Category | Tools |
