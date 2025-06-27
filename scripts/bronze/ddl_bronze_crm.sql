@@ -1,15 +1,16 @@
-/*how to validate object exist in database 
-IF OBJECT_ID ('table_name', 'object_type') IS NOT NULL
-	DROP TABLE table_name;
-	
-	=======================================================
-	DDL Script: Create Bronze Table (CRM)
-	=======================================================
-	Script Purpose:
-		This script creates tables in the 'bronze' schema, dropping existing 
-		tables if they already exist.
-	Run this script to re-define the DDL structure of 'bronze' tables
-
+/*  
+    How to Validate if an Object Exists in the Database:
+    ----------------------------------------------------
+    IF OBJECT_ID('table_name', 'object_type') IS NOT NULL
+        DROP TABLE table_name;
+    
+    =======================================================
+    DDL Script: Create Bronze Table (CRM)
+    =======================================================
+    Script Purpose:
+        This script creates tables in the 'bronze' schema, dropping them first 
+        If they already exist.
+        Use this script to re-define the DDL structure of the 'bronze' tables.
 */
 
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
