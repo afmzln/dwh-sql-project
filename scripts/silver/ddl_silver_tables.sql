@@ -1,25 +1,23 @@
 /*  
-    How to Validate if an Object Exists in the Database:
-    ----------------------------------------------------
-    IF OBJECT_ID('table_name', 'object_type') IS NOT NULL
-        DROP TABLE table_name;
-    
-    =======================================================
-    DDL Script: Create Silver Table (CRM & ERP)
-    =======================================================
-    Script Purpose:
-        This script creates tables in the 'silver' schema, dropping them first 
-        if they already exist.
-        Use this script to re-define the DDL structure of the 'silver' tables.
-	===================
-	Metadata Columns
-	===================
-	Additional columns added by data engineers that do not originate from the source data.
-	Examples:
-		create_date: The timestamp when the record was loaded.
-		update_date: The timestamp of the record's last update.
-		source_system: The origin system of the record.
-		file_location: The source file path of the record.
+## How to Validate if an Object Exists in the Database
+----------------------------------------------------
+IF OBJECT_ID('table_name', 'object_type') IS NOT NULL
+    DROP TABLE table_name;
+
+=======================================================
+## DDL Script: Create Silver Table (CRM & ERP)
+=======================================================
+### Script Purpose
+This script redefines the DDL structure of 'silver' tables, dropping them first if they exist.
+
+### Metadata Columns
+Additional columns added by data engineers (not part of the source data).
+
+Examples:
+  - `create_date`: Timestamp when the record was loaded.
+  - `update_date`: Timestamp of the record's last update.
+  - `source_system`: Origin system of the record.
+  - `file_location`: Source file path of the record.
 */
 
 IF OBJECT_ID ('silver.crm_cust_info', 'U') IS NOT NULL
