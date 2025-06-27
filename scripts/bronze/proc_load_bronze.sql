@@ -1,30 +1,23 @@
-/* Method to load data from source to data warehouse is BULK INSERT
-	BULK INSERT - method of loading massive amt of data very quickly from csv files/txt file directly into database
-	TRUNCATE - Quickly delete all rows frm a table, resetting it to an empty state
-	PRINT - to track  execution,debug issues, and understand its flow
-	TABLOCK -locking entire table during loading
-	TRY...CATCH - ensures error handling,data integrity, and issue logging for easier debugging
-	Track ETL Duration - Helps to identify bottlenecks, optimize performance, monitor trends, detect issues
-	DATEDIFF() - calculate the difference btwn 2 dates,return days,months or years
+/*  
+    Method to Load Data from Source to Data Warehouse: BULK INSERT
+    -------------------------------------------------------------
+    BULK INSERT - A method for quickly loading large amounts of data from CSV/TXT files directly into the database.
+    TRUNCATE    - Quickly deletes all rows from a table, resetting it to an empty state.
+    PRINT       - Used to track execution, debug issues, and understand the process flow.
+    TABLOCK     - Locks the entire table during loading for improved performance.
+    TRY...CATCH - Ensures proper error handling, maintains data integrity, and logs issues for easier debugging.
+    Track ETL Duration - Helps identify bottlenecks, optimize performance, monitor trends, and detect issues.
+    DATEDIFF()  - Calculates the difference between two dates, returning days, months, or years.
 
-	===============================================================================
-	Stored Procedure: Load Bronze Layer (Source -> Bronze)
-	===============================================================================
-	Script Purpose:
-		This stored procedure loads data into the 'bronze' schema from external CSV files.
-		It perform the following actions:
-			BULK INSERT - method of loading massive amount of data  from csv files/txt file directly into database (bronze tables)
-			TRUNCATE - Quickly delete all rows frm a table, resetting it to an empty state
-			PRINT - to track  execution,debug issues, and understand its flow
-			TABLOCK -locking entire table during loading
-			TRY...CATCH - ensures error handling,data integrity, and issue logging for easier debugging
-			Track ETL Duration - Helps to identify bottlenecks, optimize performance, monitor trends, detect issues
-			DATEDIFF() - calculate the difference btwn 2 dates,return days,months or years
-		Parameters:
-			None. This stored procedure does not accept any parameters or return any values.
-
-		Usage Example:
-			EXEC bronze.load_bronze 
+    ===============================================================================
+    Stored Procedure: Load Bronze Layer (Source -> Bronze)
+    ===============================================================================
+    Script Purpose:
+        This stored procedure loads data into the 'bronze' schema from external CSV files.
+        Parameters:
+            None. This procedure does not accept parameters or return values.
+        Usage Example:
+            EXEC bronze.load_bronze;
 */
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
