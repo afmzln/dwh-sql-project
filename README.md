@@ -22,12 +22,12 @@ This is my personal **end-to-end data warehousing project**—a structured, self
 
 ---
 
-### 🔧 **Silver Layer (Cleaned)** 🚧 *In Progress*  
+### 🔧 **Silver Layer (Cleaned)** ✅
 - **Transformations**:  
   - Schema validation, deduplication.  
-  - Standardize formats (dates, currencies).  
+  - Standardize formats (dates, gender, marital status).  
 - **SQL Techniques**:  
-  - `TRY_CAST()`, `COALESCE()`, `PIVOT`.  
+  - `TRIM()`, `CASE WHEN`, `SUBSTRING() `.  
 
 ---
 
