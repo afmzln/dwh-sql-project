@@ -4,11 +4,15 @@ DATA TRANSFORMATION: Bronze → Silver Layer Load
 ========================================================
 
 Purpose:
+  This stored procedure performs the ETL ( Extract, Transform, Load) process. 
   Transforms raw source data (bronze layer) into analysis-ready tables (silver layer) by:
   - Cleaning inconsistent data (NULL handling, trimming, invalid values)
   - Standardizing coded values (gender, marital status, product lines)
   - Enriching with business-friendly labels
   - Applying data integrity checks
+Actions Performed:
+  - Truncates Silver Table
+  - Insert transformed and cleansed data from Bronze into Silver tables.
 
 Key SQL Functions Used:
   - TRIM()          - Removes leading/trailing whitespace
