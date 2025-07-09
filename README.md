@@ -12,7 +12,7 @@ This is my personal **end-to-end data warehousing project**—a structured, self
 ## 📌 **Core Components**  
 ![Medallion Architecture](https://github.com/user-attachments/assets/f883bc6e-1f3d-48bc-9f24-879fa4c992ea)  
 
-### 🌱 **Bronze Layer (Raw)** ✅  
+### 🌱 **Bronze Layer (Raw)** 
 - **Data Ingestion**:  
   - Load CSV/JSON files *as-is*.  
   - Preserve source fidelity with metadata.  
@@ -22,7 +22,7 @@ This is my personal **end-to-end data warehousing project**—a structured, self
 
 ---
 
-### 🔧 **Silver Layer (Cleaned)** ✅
+### 🔧 **Silver Layer (Cleaned)** 
 - **Transformations**:  
   - Schema validation, deduplication.  
   - Standardize formats (dates, gender, marital status).  
@@ -31,13 +31,10 @@ This is my personal **end-to-end data warehousing project**—a structured, self
 
 ---
 
-### 🧠 **Gold Layer (Business-Ready)** 🚧 *Planned*  
+### 🧠 **Gold Layer (Business-Ready)** 
 - **Star Schema**:  
   - Fact tables (e.g., `fact_sales`).  
-  - Dimensions (e.g., `dim_customer`).  
-- **Optimizations**:  
-  - Columnstore indexes.  
-  - Partitioning.  
+  - Dimensions (e.g., `dim_customers`, `dim_products`).  
 
 ---
 
